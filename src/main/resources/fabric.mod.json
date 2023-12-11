@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ultramarine",
+  "version": "${version}",
+  "name": "Ultramarine",
+  "description": "A Chinese Style Minecraft Mod",
+  "authors": [
+    "Soul_Shadow",
+    "LocusAzzurro",
+    "cnlimiter[fabric]"
+  ],
+  "contributors": [
+    "Arrokoth",
+    "Tapio"
+  ],
+  "contact": {
+    "repo": "https://github.com/LocusAzzurro/Ultramarine",
+    "fork": "https://github.com/cnlimiter/Ultramarine"
+  },
+  "license": "Source and binary: BSD-3; Assets: CC-BY-NC 4.0",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.voxelutopia.ultramarine.UltramarineClient"
+    ],
+    "main": [
+      "org.voxelutopia.ultramarine.Ultramarine"
+    ],
+    "fabric-datagen": [
+      "org.voxelutopia.ultramarine.UltramarineDataGenerators"
+    ]
+  },
+  "mixins": [
+    "ultramarine.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "[1.20, 1.20.1]"
+  }
+}
