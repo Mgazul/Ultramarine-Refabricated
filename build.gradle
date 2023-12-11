@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'fabric-loom' version '1.4.1'
     id 'maven-publish'
 }
 
@@ -27,10 +27,6 @@ repositories {
         }
     }
     mavenCentral()
-    maven {
-        name = "Fuzs Mod Resources"
-        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
-    }
     maven { url = "https://mvn.devos.one/snapshots/" }
 }
 
@@ -43,7 +39,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extra_version}")))
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:model_generators:${project.port_version}")
+    include(modImplementation("io.github.fabricators_of_create.Porting-Lib:model_generators:${project.port_version}"))
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rei_version}"
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
