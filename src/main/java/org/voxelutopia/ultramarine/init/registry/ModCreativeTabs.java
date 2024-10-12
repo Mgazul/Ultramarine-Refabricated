@@ -34,7 +34,7 @@ public class ModCreativeTabs {
                 .build());
         TOOLS = register("tools_tab", FabricItemGroup.builder()
                 .title(Component.translatable("itemGroup." + Ultramarine.MOD_ID + ".tools"))
-                .icon(() -> new ItemStack(ModItems.WOODEN_HAMMER))
+                .icon(() -> new ItemStack(ModItems.WOODEN_MALLET))
                 .displayItems((itemDisplayParameters, output) -> {
                     for (Item item : CreativeTabData.itemSets.get(CreativeTabData.TOOLS)) {
                         output.accept(item);

@@ -169,7 +169,7 @@ public class ModBlocks {
     public static final Block BLACK_WHITE_GREEN_CARVED_WOOD = registerBlock("black_white_green_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
     public static final Block BLACK_WHITE_BLUE_CARVED_WOOD = registerBlock("black_white_blue_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
     public static final Block RED_AND_GREEN_CARVED_WOOD = registerBlock("red_and_green_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
-    public static final Block BLUE_AND_WHITE_CARVED_WOOD = registerBlock("blue_and_white_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
+    public static final Block BLUE_AND_WHITE_CARVED_WOOD = registerBlock("blue_and_red_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
     public static final Block BLUE_WHITE_RED_CARVED_WOOD = registerBlock("blue_white_red_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
     public static final Block GREEN_WHITE_RED_CARVED_WOOD = registerBlock("green_white_red_carved_wood", new BaseBlock(BaseBlockProperty.WOOD));
     public static final Block BLUE_AND_YELLOW_CARVED_WOOD_VARIANT_1 = registerBlock("blue_and_yellow_carved_wood_variant_1", new BaseBlock(BaseBlockProperty.WOOD));
@@ -622,6 +622,7 @@ public class ModBlocks {
     public static final Block OAK_BED = registerBlock("oak_bed",
             SeatDecorativeBlock.with(BaseBlockProperty.WOOD).seatOffset(new Vec3(0.0f, -0.1f, 0.0f)).shaped(DecorativeBlock.HALF_BLOCK).directional().build());
 
+
     // SCREEN
 
     public static final Block LARGE_LANDSCAPE_PAINTING_SCREEN = registerBlock("large_landscape_painting_screen",
@@ -819,6 +820,12 @@ public class ModBlocks {
     public static final Block JADE_ORE = registerBlock("jade_ore", new BaseOreBlock(2, 5));
     public static final Block MAGNESITE_ORE = registerBlock("magnesite_ore", new BaseOreBlock(2, 5));
     public static final Block HEMATITE_ORE = registerBlock("hematite_ore", new BaseOreBlock(1, 3));
+
+    public static final Block DEEPSLATE_JADE_ORE = registerBlock("deepslate_jade_ore", new BaseOreBlock(2, 5));
+    public static final Block DEEPSLATE_MAGNESITE_ORE = registerBlock("deepslate_magnesite_ore", new BaseOreBlock(2, 5));
+    public static final Block DEEPSLATE_HEMATITE_ORE = registerBlock("deepslate_hematite_ore", new BaseOreBlock(1, 3));
+    public static final Block NETHER_COBALT_ORE = registerBlock("nether_cobalt_ore", new BaseOreBlock(2, 5));
+    public static final Block JADE_BLOCK = registerBlock("jade_block", new BaseBlock());
 
     /**
      * TOOLS

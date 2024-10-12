@@ -4,13 +4,20 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.block.Block;
 import org.voxelutopia.ultramarine.Ultramarine;
 import org.voxelutopia.ultramarine.common.item.AquaticPlantBlockItem;
 import org.voxelutopia.ultramarine.common.item.BaseFood;
-import org.voxelutopia.ultramarine.common.item.WoodenHammer;
+import org.voxelutopia.ultramarine.common.item.DyePowder;
+import org.voxelutopia.ultramarine.common.item.WoodenMallet;
+import org.voxelutopia.ultramarine.init.ModTiers;
 import org.voxelutopia.ultramarine.init.data.CreativeTabData;
 
 @SuppressWarnings("unused")
@@ -635,8 +642,13 @@ public class ModItems {
     // ORE BLOCK
 
     public static final Item JADE_ORE = fromBlock(ModBlocks.JADE_ORE, CreativeTabData.MATERIALS);
+    public static final Item DEEPSLATE_JADE_ORE = fromBlock(ModBlocks.DEEPSLATE_JADE_ORE, CreativeTabData.MATERIALS);
     public static final Item MAGNESITE_ORE = fromBlock(ModBlocks.MAGNESITE_ORE, CreativeTabData.MATERIALS);
+    public static final Item DEEPSLATE_MAGNESITE_ORE = fromBlock(ModBlocks.DEEPSLATE_MAGNESITE_ORE, CreativeTabData.MATERIALS);
     public static final Item HEMATITE_ORE = fromBlock(ModBlocks.HEMATITE_ORE, CreativeTabData.MATERIALS);
+    public static final Item DEEPSLATE_HEMATITE_ORE = fromBlock(ModBlocks.DEEPSLATE_HEMATITE_ORE, CreativeTabData.MATERIALS);
+    public static final Item NETHER_COBALT_ORE = fromBlock(ModBlocks.NETHER_COBALT_ORE, CreativeTabData.MATERIALS);
+    public static final Item JADE_BLOCK = fromBlock(ModBlocks.JADE_BLOCK, CreativeTabData.MATERIALS);
 
     // ORE PRODUCT
 
@@ -645,6 +657,8 @@ public class ModItems {
     public static final Item MAGNESITE_DUST = simpleItem("magnesite_dust", CreativeTabData.MATERIALS);
     public static final Item RAW_HEMATITE = simpleItem("raw_hematite", CreativeTabData.MATERIALS);
     public static final Item HEMATITE_DUST = simpleItem("hematite_dust", CreativeTabData.MATERIALS);
+    public static final Item RAW_COBALT = simpleItem("raw_cobalt", CreativeTabData.MATERIALS);
+    public static final Item COBALT_DUST = simpleItem("cobalt_dust", CreativeTabData.MATERIALS);
 
     // BRICK
 
@@ -684,10 +698,30 @@ public class ModItems {
     public static final Item POLISHED_EBONY_PLANK = simpleItem("polished_ebony_plank", CreativeTabData.MATERIALS);
     public static final Item WOODEN_FRAME = simpleItem("wooden_frame", CreativeTabData.MATERIALS);
 
+    public static final Item CALCITE_DUST = simpleItem("calcite_dust", CreativeTabData.MATERIALS);
+    public static final Item BLUE_AND_WHITE_GLAZE_POWDER = simpleItem("blue_and_white_glaze_powder", CreativeTabData.MATERIALS);
+    public static final Item SMALL_CLAY_VASE = simpleItem("small_clay_vase", CreativeTabData.MATERIALS);
+    public static final Item MEDIUM_CLAY_VASE = simpleItem("medium_clay_vase", CreativeTabData.MATERIALS);
+    public static final Item LARGE_CLAY_VASE = simpleItem("large_clay_vase", CreativeTabData.MATERIALS);
+    public static final Item TALL_CLAY_VASE = simpleItem("tall_clay_vase", CreativeTabData.MATERIALS);
+    public static final Item CLAY_POT = simpleItem("clay_pot", CreativeTabData.MATERIALS);
+    public static final Item TALL_CLAY_POT = simpleItem("tall_clay_pot", CreativeTabData.MATERIALS);
+    public static final Item CLAY_PLATE = simpleItem("clay_plate", CreativeTabData.MATERIALS);
+    public static final Item CLAY_BOWL = simpleItem("clay_bowl", CreativeTabData.MATERIALS);
+    public static final Item SMALL_WHITE_PORCELAIN_VASE = simpleItem("small_white_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item MEDIUM_WHITE_PORCELAIN_VASE = simpleItem("medium_white_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item LARGE_WHITE_PORCELAIN_VASE = simpleItem("large_white_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item SMALL_GREEN_PORCELAIN_VASE = simpleItem("small_green_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item MEDIUM_GREEN_PORCELAIN_VASE = simpleItem("medium_green_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item TALL_BLUE_PORCELAIN_VASE = simpleItem("tall_blue_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item TALL_BLUE_AND_WHITE_PORCELAIN_VASE = simpleItem("tall_blue_and_white_porcelain_vase", CreativeTabData.MATERIALS);
+    public static final Item BLACK_PORCELAIN_PLATE = simpleItem("black_porcelain_plate", CreativeTabData.MATERIALS);
+    public static final Item BLUE_AND_WHITE_PORCELAIN_PLATE = simpleItem("blue_and_white_porcelain_plate", CreativeTabData.MATERIALS);
     // PORCELAIN
 
     public static final Item BLUE_AND_WHITE_PORCELAIN_PIECE = simpleItem("blue_and_white_porcelain_piece", CreativeTabData.MATERIALS);
     public static final Item BLUE_AND_WHITE_PORCELAIN_SHARDS = simpleItem("blue_and_white_porcelain_shards", CreativeTabData.MATERIALS);
+    public static final Item PORCELAIN_PIECE = simpleItem("porcelain_piece", CreativeTabData.MATERIALS);
 
     // PARTS
 
@@ -695,6 +729,27 @@ public class ModItems {
     public static final Item GOLD_PARTS = simpleItem("gold_parts", CreativeTabData.MATERIALS);
     public static final Item JADE_PARTS = simpleItem("jade_parts", CreativeTabData.MATERIALS);
     public static final Item PORCELAIN_PARTS = simpleItem("porcelain_parts", CreativeTabData.MATERIALS);
+    public static final Item BRONZE_PARTS = simpleItem("bronze_parts", CreativeTabData.MATERIALS);
+
+// DYE POWDERS
+
+    public static final Item WHITE_DYE_POWDER = dyePowderItem("white_dye_powder", DyeColor.WHITE);
+    public static final Item ORANGE_DYE_POWDER = dyePowderItem("orange_dye_powder", DyeColor.ORANGE);
+    public static final Item MAGENTA_DYE_POWDER = dyePowderItem("magenta_dye_powder", DyeColor.MAGENTA);
+    public static final Item LIGHT_BLUE_DYE_POWDER = dyePowderItem("light_blue_dye_powder", DyeColor.LIGHT_BLUE);
+    public static final Item YELLOW_DYE_POWDER = dyePowderItem("yellow_dye_powder", DyeColor.YELLOW);
+    public static final Item LIME_DYE_POWDER = dyePowderItem("lime_dye_powder", DyeColor.LIME);
+    public static final Item PINK_DYE_POWDER = dyePowderItem("pink_dye_powder", DyeColor.PINK);
+    public static final Item GRAY_DYE_POWDER = dyePowderItem("gray_dye_powder", DyeColor.GRAY);
+    public static final Item LIGHT_GRAY_DYE_POWDER = dyePowderItem("light_gray_dye_powder", DyeColor.LIGHT_GRAY);
+    public static final Item CYAN_DYE_POWDER = dyePowderItem("cyan_dye_powder", DyeColor.CYAN);
+    public static final Item PURPLE_DYE_POWDER = dyePowderItem("purple_dye_powder", DyeColor.PURPLE);
+    public static final Item BLUE_DYE_POWDER = dyePowderItem("blue_dye_powder", DyeColor.BLUE);
+    public static final Item BROWN_DYE_POWDER = dyePowderItem("brown_dye_powder", DyeColor.BROWN);
+    public static final Item GREEN_DYE_POWDER = dyePowderItem("green_dye_powder", DyeColor.GREEN);
+    public static final Item RED_DYE_POWDER = dyePowderItem("red_dye_powder", DyeColor.RED);
+    public static final Item BLACK_DYE_POWDER = dyePowderItem("black_dye_powder", DyeColor.BLACK);
+    public static final Item GOLD_DYE_POWDER = dyePowderItem("gold_dye_powder", DyeColor.YELLOW);
 
     // MATERIALS
 
@@ -704,6 +759,8 @@ public class ModItems {
     public static final Item SILK = simpleItem("silk", CreativeTabData.MATERIALS);
     public static final Item XUAN_PAPER = simpleItem("xuan_paper", CreativeTabData.MATERIALS);
     public static final Item COPPER_CASH_COIN = simpleItem("copper_cash_coin", CreativeTabData.MATERIALS);
+    public static final Item BRONZE_INGOT = simpleItem("bronze_ingot", CreativeTabData.MATERIALS);
+    public static final Item BRONZE_DUST = simpleItem("bronze_dust", CreativeTabData.MATERIALS);
 
     // FOOD
 
@@ -717,7 +774,15 @@ public class ModItems {
      * TOOLS
      */
 
-    public static final Item WOODEN_HAMMER = registerItem("wooden_hammer", new WoodenHammer());
+    public static final Item WOODEN_MALLET = registerItem("wooden_mallet", new WoodenMallet());
+    public static final Item BLUE_AND_WHITE_PORCELAIN_SWORD = toolItem("blue_and_white_porcelain_sword",
+            new SwordItem(ModTiers.BLUE_AND_WHITE_PORCELAIN, 3, -2.4F, new Item.Properties()));
+    public static final Item BLUE_AND_WHITE_PORCELAIN_SHOVEL = toolItem("blue_and_white_porcelain_shovel",
+            new ShovelItem(ModTiers.BLUE_AND_WHITE_PORCELAIN, 1.5F, -3.0F, new Item.Properties()));
+    public static final Item BLUE_AND_WHITE_PORCELAIN_PICKAXE = toolItem("blue_and_white_porcelain_pickaxe",
+            new PickaxeItem(ModTiers.BLUE_AND_WHITE_PORCELAIN, 1, -2.8F, new Item.Properties()));
+    public static final Item BLUE_AND_WHITE_PORCELAIN_AXE = toolItem("blue_and_white_porcelain_axe",
+            new AxeItem(ModTiers.BLUE_AND_WHITE_PORCELAIN, 6.0F, -3.0F, new Item.Properties()));
     public static final Item WOODWORKING_WORKBENCH = fromBlock(ModBlocks.WOODWORKING_WORKBENCH, CreativeTabData.TOOLS);
 
     private static <B extends Block> Item fromBlock(Block block, CreativeTabData tabDef) {
@@ -732,9 +797,9 @@ public class ModItems {
         return registryObject;
     }
 
-//    private static <B extends Block> Item registerBlockItem(String name, BlockItem blockItem, ModCreativeTab tabDef) {
+//    private static <B extends Block> Item registerBlockItem(String name, BlockItem blockItem, CreativeTabData tabDef) {
 //        Item registryObject = ITEMS.register(name, () -> blockItem);
-//        ModCreativeTab.putItemInSet(registryObject, tabDef);
+//        CreativeTabData.putItemInSet(registryObject, tabDef);
 //        return registryObject;
 //    }
 
@@ -750,13 +815,27 @@ public class ModItems {
         return registryObject;
     }
 
+    private static Item toolItem(String name, Item food) {
+        Item registryObject = registerItem(name, food);
+        CreativeTabData.putItemInSet(registryObject, CreativeTabData.TOOLS);
+        return registryObject;
+    }
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Ultramarine.MOD_ID, name), item);
     }
 
+
     public static void registerModItems() {
         Ultramarine.info("Registering Mod Items for " + Ultramarine.MOD_ID);
     }
+
+    private static Item dyePowderItem(String name, DyeColor color) {
+        Item registryObject = registerItem(name, new DyePowder(color));
+        CreativeTabData.putItemInSet(registryObject, CreativeTabData.MATERIALS);
+        return registryObject;
+    }
+
 
 }
